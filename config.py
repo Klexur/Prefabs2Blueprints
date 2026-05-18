@@ -1,14 +1,19 @@
-# This folder contains all the prefabs to convert
-# They will be put in a folder equal to their filename
+# Path to search for Prefab sbc files
 # Use only forward slashes in the path
+# Path is searched recursively so any subfolders with sbc files will be found
 # Default value is the game's Prefabs folder
-BATCH_PATH = "C:/Program Files (x86)/Steam/steamapps/common/SpaceEngineers/Content/Data/Prefabs"
+PREFABS_PATH = "C:/Program Files (x86)/Steam/steamapps/common/SpaceEngineers/Content/Data/Prefabs"
 
-# The program will prepend this when creating the folder in batch mode, meaning it will add this in front of the name of the folder
-PREPEND = "PREFAB_"
+# Each blueprint will be put in a folder equal to the original filename
+# Extra string to add to start of new blueprint names
+PREFIX = "PREFAB_"
 
-# The program will append this when creating the folder in batch mode, meaning it will add this to the end of the name of the folder
-APPEND = ""
+# Extra string to add to end of new blueprint names
+SUFFIX = ""
 
-# Change this to 'True' to delete the Prefab sbc files after completion and only keep the Blueprints, 'False' to keep the files
+# 'True' will delete the found Prefab sbc files after making the Blueprint
+# 'False' will keep the found Prefab sbc files
 DELETE_OLD_FILES = False
+
+# Preview what will happen without making changes
+DRY_RUN = True
