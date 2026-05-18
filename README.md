@@ -1,39 +1,26 @@
-## Prefabs2Blueprints Version 0.7
-Is working as of Space Engineers version: 1.208
-This Python script converts Space Engineers prefabs to Blueprints.
+## Prefabs2Blueprints
+Working as of Space Engineers version: 1.208
 
-To use P2B, you need [Python][0].
-I'm not sure if my new changes break Python 2 Compatibility, Python 3 would be best for now.
+A Python script that converts Space Engineers Prefab files to Blueprints.
 
 ### Requirements
-1. [Download and install Python][0]
-2. [Download the code][1]
+- [Download and install Python][0] (only tested with 3.x, 2.x is unknown)
+- [Download the scripts][1]
 
-### Setup default
-1. Copy the `config.py` and `convert.py` files into the same folder.
+### Setup
+1. Copy `config.py` and `convert.py` files into the same folder.
+2. Open `config.py` with a text editor to check or change the default values.
+   - The default values should match with a default Space Engineers install.
+   - If you have a non-default install, change and save the paths accordingly.
+3. Run (double-click) the `convert.py` file.
 
-### Setup custom
-1. Create a new folder anywhere you like.
-2. Put all the `.sbc` prefabs that you want to convert in that folder. `sbcB5` files are [not needed][2].
-3. Copy the `config.py` and `convert.py` files into the same folder.
-5. Open `config.py` with any text editor.
-6. Edit `BATCH_PATH` to the full path of the folder you created in step 1.
-7. Replace any singular backward slashes `\` with forward slashes `/` or double-backward slashes `\\` in the path.
-8. The name of the `.sbc` files will be the folders' names.
-9. You can add something to `APPEND` and `PREPEND`, P2B will respectively append or prepend those to the path.
-   (Explained further in `config.py`)
+### Notes
+The script should make new folders for each new blueprint automatically.
 
-### Running
-When you're done editing your settings, save `config.py` and double-click on `converter.py`.
-The blueprints will be put directly into your blueprints folder automatically
+The original project had notes that past version game settings were not retained in the created blueprints. I'm not sure of what settings might be missing, but this fork works for me.
 
-The reason many of the older version's settings are not present is that I couldn't find what they referred to,
-Such as the dampener settings, or I did not know how to add them at the moment, such as the owner settings
-I modified this as a quick solution and it appears to work.
-
-Please report any issues using the [GitHub issue tracker][3].
+Please report any issues using the [GitHub issue tracker][2].
 
 [0]: https://www.python.org/downloads/
 [1]: https://github.com/Klexur/Prefabs2Blueprints/archive/master.zip
-[2]: https://steamcommunity.com/app/244850/discussions/0/1636417554427487220/
-[3]: https://github.com/Klexur/Prefabs2Blueprints/issues
+[2]: https://github.com/Klexur/Prefabs2Blueprints/issues
